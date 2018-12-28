@@ -5,10 +5,15 @@ class Nav extends React.Component {
     render() {
         return(
             <div className="Nav">
-                <Link smooth to="/">Home</Link>
-                <Link smooth to="/#about">About</Link>
-                <Link smooth to="/#stack">Stack</Link>
-                <Link smooth to="/#contact">Contact</Link>
+                <Link smooth to="/#about" className="NavLink">
+                    <span className="NavItem">About</span>
+                </Link>
+                <Link smooth to="/#stack" className="NavLink">
+                    <span className="NavItem">Stack</span>
+                </Link>
+                <Link smooth to="/#contact" className="NavLink">
+                    <span className="NavItem">Contact</span>
+                </Link>
             </div>
         )
     }

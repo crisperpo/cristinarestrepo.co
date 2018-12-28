@@ -1,0 +1,122 @@
+@import "./_vars.scss";
+$title-font: 'BebasRegular';
+$title-font2: normal 24px/1.5 'Open Sans', sans-serif;
+$cool-red: #F44336;
+$box-shadow-bottom-only: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+
+.App {
+  margin: 0 1em;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.3em;
+  color: $color-juri;
+
+  .Header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: $color-purple;
+
+    .Nav {
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      justify-self: flex-start;
+      align-self: flex-end;
+      position: absolute;
+      top: 1em;
+
+      .NavLink {
+        text-decoration: none;
+
+        .NavItem {
+          font-size: 0.9em;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+        &:nth-child(1) {
+          color: $color-blue;
+        }
+        &:nth-child(2) {
+          color: $color-green;
+        }
+        &:nth-child(3) {
+          color: $color-pink;
+        }
+      }
+    }
+
+    .Title {
+      font-family: 'BebasRegular';
+      font-size: 5em;
+      line-height: 0.7em;
+      opacity: 0.7;
+    }
+
+    .SocialBar {
+      padding: .25rem 0;
+      font-size: 2rem;
+      display: flex;
+      justify-content: space-between;
+      width: 150px;
+
+      a {
+        color: $color-juri;
+
+        &:hover {
+          color: $color-juri-light;
+        }
+      }
+    }
+
+  }
+  .Section {
+    padding: 2em 0;
+
+    .Title {
+      display: block;
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: left;
+      padding-bottom: 0.5em;
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+
+  #about {
+    .Title {
+      color: $color-blue;
+    }
+  }
+  #stack {
+    .Title {
+      color: $color-green;
+    }
+  }
+  #contact {
+    .Title {
+      color: $color-pink;
+    }
+  }
+}
+
+.About, .Stack, .Contact {
+  height: 300px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

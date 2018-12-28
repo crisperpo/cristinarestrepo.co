@@ -1,0 +1,22 @@
+/* Colors */
+$color-red: #e21e25;
+$color-purple: #7251a2;
+$color-green: #bed431;
+$color-blue: #5ecae6;
+$color-yellow: #f6c715;
+$color-pink: #f11aa8;
+$color-orange: #fe4419;
+$color-juri: #777777;
+$color-juri-light: #999999;
+
+/* Fonts */
+@font-face {
+  font-family: 'BebasRegular';
+  src: url('../fonts/BEBAS___-webfont.eot');
+  src: url('../fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/BEBAS___-webfont.woff') format('woff'),
+  url('../fonts/BEBAS___-webfont.ttf') format('truetype'),
+  url('../fonts/BEBAS___-webfont.svg#BebasRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

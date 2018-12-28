@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import '../App.scss';
+import '../assets/scss/App.scss';
 import About from '../components/About';
 import Stack from '../components/Stack';
 import Contact from '../components/Contact';
-import Nav from '../components/Nav'
+import Nav from '../components/Nav';
+import SocialBar from '../components/SocialBar';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 class App extends Component {
@@ -11,11 +12,12 @@ class App extends Component {
     return (
         <Router>
           <div className="App">
-            <header className="App-header">
-              <h1 className="App-title">Welcome to React</h1>
+            <header className="Header">
               <Nav />
+              <div className="Title">Cristina Restrepo</div>
+              <SocialBar />
             </header>
-            <div className="content">
+            <div className="Content">
               <About />
               <Stack />
               <Contact />
