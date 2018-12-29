@@ -5,7 +5,7 @@ class Stack extends Component {
         return (
             <div id="stack" className="Section">
                 <span className="Title">Stack</span>
-                    <div className="Content">
+                    <div className="Section--Content">
                         <SkillSet />
                         <SkillSet />
                         <SkillSet />

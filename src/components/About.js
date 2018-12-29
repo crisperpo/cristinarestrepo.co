@@ -5,7 +5,7 @@ class About extends Component {
         return (
             <div id="about" className="Section">
                 <span className="Title">About</span>
-                <div className="Content">
+                <div className="Section--Content">
                     <div className="Description">
                         <p>
                             I am Cristina, a web enthusiast who started coding in 2011 as a full-stack developer, and later decided to focus exclusively in front-end technologies.
@@ -18,7 +18,7 @@ class About extends Component {
                         </p>
                     </div>
                     <div className="Photo">
-                        <img src="/me.png" />
+                        <img src="/me.png" alt="me" />
                     </div>
                 </div>
             </div>

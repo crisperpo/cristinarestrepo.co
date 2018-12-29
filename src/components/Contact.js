@@ -5,7 +5,7 @@ class Contact extends Component {
         return (
             <div id="contact" className="Section">
                 <span className="Title">Contact</span>
-                <div className="Content">
+                <div className="Section--Content">
                     Insert contact form here
                 </div>
             </div>

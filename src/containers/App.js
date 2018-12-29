@@ -12,10 +12,13 @@ class App extends Component {
     return (
         <Router>
           <div className="App">
+            <Nav />
             <header className="Header">
-              <Nav />
-              <div className="Title">Cristina Restrepo</div>
-              <SocialBar />
+              <div className="Heading">
+                <div className="Title">Cristina Restrepo</div>
+                <div className="Headline">Front-end dev {'\u00b7'} Open-source fan {'\u00b7'} Globe trotter</div>
+                <SocialBar />
+              </div>
             </header>
             <div className="Content">
               <About />
