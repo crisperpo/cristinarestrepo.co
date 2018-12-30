@@ -86,6 +86,19 @@ html,
       .TitleSegment {
         display: flex;
         opacity: 0.7;
+
+        .Letter {
+          mix-blend-mode: color-burn;
+          position: relative;
+          transition: top ease 0.1s;
+          transition-delay: 2s;
+          transition: top ease 0.1s;
+          transition-delay: 2s;
+
+          &.hovered {
+            animation: letterAnimation 3s;
+          }
+        }
       }
     }
 
@@ -117,7 +130,7 @@ html,
   padding: $gutter;
 }
 .Section {
-
+  min-height: 300px;
   .Title {
     display: block;
     font-size: 18px;
@@ -145,18 +158,5 @@ html,
 #contact {
   .Title {
     color: $color-pink;
-  }
-}
-
-.About, .Stack, .Contact {
-  height: 300px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

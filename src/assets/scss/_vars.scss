@@ -32,12 +32,33 @@ $color-juri-light: #999999;
   font-style: normal;
 }
 
+/* Animations */
+@keyframes letterAnimation {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 0.2em;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes photoSpinAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 :export {
   color-red: $color-red;
   color-purple: $color-purple;
   color-green: $color-green;
   color-blue: $color-blue;
+  color-orange: $color-orange;
   color-yellow:$color-yellow;
   color-pink: $color-pink;
-  color-orange: $color-orange
 }
