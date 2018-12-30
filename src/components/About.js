@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import styleVars from '../assets/scss/_vars.scss';
 
 class About extends Component {
     render() {
-        return (
-            <div id="about" className="Section">
-                <span className="Title">About</span>
-                <div className="Section--Content">
+      const titleStyles = {
+        color: styleVars.colorBlue
+      }
+      return(
+        <div id="about" className="Section">
+                <span className="Title" style={ titleStyles }>About</span>
+                <div className="Body">
                     <div className="Description">
                         <p>
                             I am Cristina, a web enthusiast who started coding in 2011 as a full-stack developer, and later decided to focus exclusively in front-end technologies.
@@ -18,11 +22,11 @@ class About extends Component {
                         </p>
                     </div>
                     <div className="Photo">
-                        <img src="/me.png" alt="me" />
+                        <img src="/me.jpg" alt="My profile picture" />
                     </div>
                 </div>
-            </div>
-        );
+        </div>
+    );
     }
 }
 

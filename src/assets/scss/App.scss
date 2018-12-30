@@ -44,7 +44,7 @@ html,
       line-height: 20px;
     }
     &:hover {
-      font-weight: bold;
+      text-decoration: underline;
     }
     &:nth-child(1) {
       color: $color-blue;
@@ -130,33 +130,59 @@ html,
   padding: $gutter;
 }
 .Section {
-  min-height: 300px;
+  padding: $gutter;
+
   .Title {
     display: block;
     font-size: 18px;
     line-height: 20px;
     font-weight: bold;
     text-align: left;
-    padding-bottom: 0.5em;
+    padding-bottom: $gutter;
   }
 
   p {
     text-align: justify;
+    margin-top: 0;
   }
 }
 
 #about {
-  .Title {
-    color: $color-blue;
+  img {
+    border-radius: 50%;
+  }
+  .Body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .Description {
+      flex: 1 1 70%;
+    }
+    .Photo {
+      margin-left: 1em;
+    }
   }
 }
-#stack {
-  .Title {
-    color: $color-green;
-  }
-}
+
 #contact {
-  .Title {
-    color: $color-pink;
+  .Body {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+}
+
+#stack {
+  .Body {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+
+    .SkillSet {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+    }
   }
 }

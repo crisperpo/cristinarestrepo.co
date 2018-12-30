@@ -2,9 +2,12 @@ import React from 'react';
 
 class SkillSet extends React.Component {
     render() {
+        const { title, content } = this.props
+
         return (
             <div className="SkillSet">
-                Skillset here
+                <span className="Subtitle">{ title }:</span>
+                <p>{ content }</p>
             </div>
         )
     }
