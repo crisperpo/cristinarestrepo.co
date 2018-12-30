@@ -77,10 +77,16 @@ html,
     .Title {
       font-family: 'BebasRegular';
       color: $color-purple;
-      font-size: calc(30px + 9vw);
-      line-height: calc(20px + 8vw);
-      opacity: 0.7;
-      max-width: 75vw;
+      font-size: calc(40px + 9vw);
+      line-height: calc(30px + 8vw);
+      display:flex;
+      flex-flow: column;
+      align-items: center;
+
+      .TitleSegment {
+        display: flex;
+        opacity: 0.7;
+      }
     }
 
     .Headline {
@@ -89,15 +95,15 @@ html,
     }
 
     .SocialBar {
-      font-size: $icn-sm-fontsize;
+      font-size: calc(25px + 2vw);
       display: flex;
       justify-content: space-between;
-      width: 150px;
 
       a {
         color: $color-juri-light;
         opacity: 0.7;
         cursor: pointer;
+        margin: 0 1vw;
 
         &:hover {
           opacity: 1;

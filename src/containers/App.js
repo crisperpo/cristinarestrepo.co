@@ -4,6 +4,7 @@ import About from '../components/About';
 import Stack from '../components/Stack';
 import Contact from '../components/Contact';
 import Nav from '../components/Nav';
+import Title from '../components/Title';
 import SocialBar from '../components/SocialBar';
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -15,7 +16,7 @@ class App extends Component {
             <Nav />
             <header className="Header">
               <div className="Heading">
-                <div className="Title">Cristina Restrepo</div>
+                <Title />
                 <div className="Headline">Front-end dev {'\u00b7'} Open-source fan {'\u00b7'} Globe trotter</div>
                 <SocialBar />
               </div>

@@ -31,3 +31,13 @@ $color-juri-light: #999999;
   font-weight: normal;
   font-style: normal;
 }
+
+:export {
+  color-red: $color-red;
+  color-purple: $color-purple;
+  color-green: $color-green;
+  color-blue: $color-blue;
+  color-yellow:$color-yellow;
+  color-pink: $color-pink;
+  color-orange: $color-orange
+}
