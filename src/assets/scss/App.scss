@@ -21,7 +21,7 @@ html,
 }
 
 .Nav {
-  width: calc(#{$screen-small} - #{2 * $gutter});
+  width: calc(#{$screen-small} - 32px);
   height: $nav-vrt-height;
   padding: $gutter;
   justify-self: flex-start;
