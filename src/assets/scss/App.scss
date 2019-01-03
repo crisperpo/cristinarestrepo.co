@@ -40,8 +40,7 @@ html,
     text-decoration: none;
 
     .NavItem {
-      font-size: 18px;
-      line-height: 20px;
+      font-size: calc(12px + 1vw);
     }
     &:hover {
       text-decoration: underline;
