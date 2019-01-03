@@ -30,7 +30,7 @@ html,
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: $screen-small) {
+  @media (min-width: $screen-medium) {
     flex-flow: row;
     margin-left: auto;
     height: $nav-hrz-height;
