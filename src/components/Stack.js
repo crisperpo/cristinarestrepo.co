@@ -2,8 +2,8 @@ import React from 'react';
 import SkillSet from './SkillSet';
 import styleVars from '../assets/scss/_vars.scss';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faMagic, faBrain, faHammer, faPlug } from '@fortawesome/free-solid-svg-icons'
-library.add(faMagic, faBrain, faHammer, faPlug)
+import { faCode, faCogs, faHammer, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
+library.add(faCode, faCogs, faHammer, faCodeBranch)
 
 class Stack extends React.Component {
     render() {
@@ -15,11 +15,11 @@ class Stack extends React.Component {
                 <span className="Title" style={ titleStyles }>Stack</span>
                 <div className="Body">
                     <SkillSet
-                        icon="magic"
+                        icon="code"
                         title="Front-End"
                         content={["JavaScript", "HTML", "CSS/SCSS", "ReactJS/Redux", "VueJS"]} />
                     <SkillSet
-                        icon="brain"
+                        icon="cogs"
                         title="Back-End"
                         content={["PHP", "CakePHP", "Python", "C", "MySQL"]} />
                     <SkillSet
@@ -27,7 +27,7 @@ class Stack extends React.Component {
                         title="Tools"
                         content={["Webpack", "Gulp", "Grunt", "Bower", "Git"]} />
                     <SkillSet
-                        icon="plug"
+                        icon="code-branch"
                         title="IT"
                         content={["AWS", "Heroku", "CCNA", "Fiddler", "Bash"]} />
                 </div>
