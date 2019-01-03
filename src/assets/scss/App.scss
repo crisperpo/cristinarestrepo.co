@@ -4,7 +4,6 @@ body,
 html,
 #root {
   width: 100%;
-  min-width: $screen-small;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -18,6 +17,7 @@ html,
   line-height: 1.3em;
   color: $color-juri;
   overflow: hidden;
+  min-width: calc(320px - 32px);
 }
 
 .Nav {
@@ -72,6 +72,7 @@ html,
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
+    max-width: 90vw;
 
     .Title {
       font-family: 'BebasRegular';
@@ -125,9 +126,6 @@ html,
   }
 }
 
-.Content {
-  padding: $gutter;
-}
 .Section {
   padding: $gutter;
 
