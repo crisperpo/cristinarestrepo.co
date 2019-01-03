@@ -129,6 +129,8 @@ html,
 
 .Section {
   padding: $gutter;
+  max-width: $screen-wide;
+  margin: 0 auto;
 
   .Title {
     display: block;
@@ -138,10 +140,15 @@ html,
     text-align: left;
     padding-bottom: $gutter;
   }
-
-  p {
-    text-align: justify;
-    margin-top: 0;
+  .Subtitle {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 1em;
+  }
+  .Body {
+    text-align: left;
+    line-height: 1.5;
   }
 }
 
@@ -152,14 +159,40 @@ html,
   .Body {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+
+    .Photo {
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      @media (min-width: $screen-medium) {
+        flex: 1 1 30%;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
 
     .Description {
       flex: 1 1 70%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      div {
+        flex: 1 1 100%;
+        min-width: 200px;
+        margin: 1em 0;
+
+        @media (min-width: $screen-medium) {
+          flex: 1;
+          margin-right: 1em;
+        }
+      }
     }
-    .Photo {
-      margin-left: 1em;
-    }
+
+
   }
 }
 
