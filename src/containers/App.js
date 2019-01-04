@@ -1,35 +1,37 @@
-import React, { Component } from 'react';
-import '../assets/scss/App.scss';
-import About from '../components/About';
-import Stack from '../components/Stack';
-import Contact from '../components/Contact';
-import Nav from '../components/Nav';
-import Title from '../components/Title';
-import SocialBar from '../components/SocialBar';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React, { Component } from 'react'
+import '../assets/scss/App.scss'
+import About from '../components/About'
+import Stack from '../components/Stack'
+import Contact from '../components/Contact'
+import Nav from '../components/Nav'
+import Title from '../components/Title'
+import SocialBar from '../components/SocialBar'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 class App extends Component {
-  render() {
+
+  render () {
     return (
-        <Router>
-          <div className="App">
-            <Nav />
-            <header className="Header">
-              <div className="Heading">
-                <Title />
-                <div className="Headline">Front-end dev {'\u00b7'} Open-source fan {'\u00b7'} Globe trotter</div>
-                <SocialBar />
-              </div>
-            </header>
-            <div className="Content">
-              <About />
-              <Stack />
-              <Contact />
+      <Router>
+        <div className="App">
+          <Nav />
+          <header className="Header">
+            <div className="Heading">
+              <Title />
+              <div className="Headline">Front-end dev {'\u00b7'} Open-source fan {'\u00b7'} Globe trotter</div>
+              <SocialBar />
             </div>
+          </header>
+          <div className="Content">
+            <About />
+            <Stack />
+            <Contact />
           </div>
-        </Router>
-    );
+        </div>
+      </Router>
+    )
   }
+
 }
 
-export default App;
+export default App
