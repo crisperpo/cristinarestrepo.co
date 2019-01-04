@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styleVars from '../assets/scss/_vars.scss'
 
-class Letter extends Component {
+class Letter extends React.Component {
 
   constructor (props) {
     super(props)
@@ -12,14 +12,10 @@ class Letter extends Component {
     this.handleAnimationEnd = this.handleAnimationEnd.bind(this)
   }
   componentDidMount () {
-    window.addEventListener('touchstart', this.handleOnHover)
-    window.addEventListener('touchend', this.handleOnHover)
-    window.addEventListener('animationend', this.handleAnimationEnd)
+    this.letter.addEventListener('animationend', this.handleAnimationEnd)
   }
   componentWillUnmount () {
-    window.removeEventListener('touchstart', this.handleOnHover)
-    window.removeEventListener('touchend', this.handleOnHover)
-    window.removeEventListener('animationend', this.handleAnimationEnd)
+    this.letter.removeEventListener('animationend', this.handleAnimationEnd)
   }
   handleOnHover () {
     this.setState({
@@ -41,7 +37,11 @@ class Letter extends Component {
     const letterClass = this.state.isHovered ? 'Letter hovered' : 'Letter'
 
     return (
-      <div className={ letterClass } style={ letterStyle } onMouseEnter={ this.handleOnHover }>
+      <div className={ letterClass }
+        ref={ (el) => (this.letter = el) }
+        style={ letterStyle }
+        onMouseEnter={ this.handleOnHover }
+        onClick={ this.handleOnHover }>
         { text + ' ' }
       </div>
     )
