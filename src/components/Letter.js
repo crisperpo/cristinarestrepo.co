@@ -11,9 +11,13 @@ class Letter extends Component {
     this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
   }
   componentDidMount () {
+    window.addEventListener('touchstart', this.handleOnHover)
+    window.addEventListener('touchend', this.handleOnHover)
     window.addEventListener('animationend', this.handleAnimationEnd)
   }
   componentWillUnmount () {
+    window.removeEventListener('touchstart', this.handleOnHover)
+    window.removeEventListener('touchend', this.handleOnHover)
     window.removeEventListener('animationend', this.handleAnimationEnd)
   }
   handleOnHover() {
