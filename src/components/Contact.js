@@ -1,24 +1,32 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styleVars from '../assets/scss/_vars.scss'
 
-class Contact extends Component {
-
-  render () {
-    const titleStyles = {
-      color: styleVars.colorPink
-    }
-    return (
-      <div id="contact" className="Section">
-        <span className="Title" style={ titleStyles }>Contact</span>
-        <div className="Body">
-          <span>+49 174 8766624</span>
-          <span>crispe1586@gmail.com</span>
-          <span>Leipzig, Germany</span>
-        </div>
+const Contact = () => (
+  <div
+    id="contact"
+    className="Section">
+    <span
+      className="Title"
+      style={{ color: styleVars.colorPink }}>
+      Contact
+    </span>
+    <div
+      className="Body">
+      <div
+        className="Info">
+        <span>
+          Leipzig
+        </span>
+        <span>
+          Germany
+        </span>
       </div>
-    )
-  }
-
-}
+      <div
+        className="Form">
+        Form
+      </div>
+    </div>
+  </div>
+)
 
 export default Contact

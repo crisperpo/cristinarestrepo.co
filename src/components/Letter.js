@@ -37,7 +37,8 @@ class Letter extends React.Component {
     const letterClass = this.state.isHovered ? 'Letter hovered' : 'Letter'
 
     return (
-      <div className={ letterClass }
+      <div
+        className={ letterClass }
         ref={ (el) => (this.letter = el) }
         style={ letterStyle }
         onMouseEnter={ this.handleOnHover }

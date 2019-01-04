@@ -12,7 +12,8 @@ class Title extends Component {
   }
   render () {
     return (
-      <div className="Title">
+      <div
+        className="Title">
         {
           ['Cristina', 'Restrepo'].map((titleSegment, lineIndex) => <div className="TitleSegment" key={ lineIndex }>{ this.splitTitle(titleSegment, lineIndex) }</div>)
         }
