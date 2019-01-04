@@ -9,7 +9,7 @@ class SkillSet extends React.Component {
     return (
       <div className="SkillSet">
         <FontAwesomeIcon
-          className="Icon Icon--md"
+          className="Icon Icon--circle"
           icon={ icon } />
         <span className="Subtitle">{ title }</span>
         { content.map((skill, i) => <span>{ skill }</span>) }
