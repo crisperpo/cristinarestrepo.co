@@ -46,15 +46,6 @@ html,
     &:hover {
       text-decoration: underline;
     }
-    &:nth-child(1) {
-      color: $color-blue;
-    }
-    &:nth-child(2) {
-      color: $color-green;
-    }
-    &:nth-child(3) {
-      color: $color-pink;
-    }
   }
 }
 
@@ -236,9 +227,7 @@ html,
 
 #contact {
   .Body {
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start;
+
   }
 }
 
