@@ -1,6 +1,7 @@
 import React from 'react'
 import Field from './Field'
 import Button from './Button'
+import Axios from 'axios'
 
 class Form extends React.Component {
 
@@ -108,11 +109,17 @@ class Form extends React.Component {
   }
 
   submitForm () {
-    if (this.state.isValid) {
-      this.clearForm()
-      // SUBMIT FORM and set isDisabled to true while sending the form
-      console.log('FORM SUBMISSION') // eslint-disable-line
+    const { isValid, formFields } = this.state
 
+    if (isValid) {
+      Axios.post(
+        `https://formspree.io/crispe1586@gmail.com`,
+        {formFields},
+        {headers: {'Accept': 'application/json'}}
+      )
+        .then(res => {
+          this.clearForm()
+        })
     } else {
       this.setState({ isSubmitted: true })
     }
