@@ -118,7 +118,7 @@ class Form extends React.Component {
     if (isValid) {
       Axios.post(
         `https://formcarry.com/s/DWGxPsFXVi1`,
-        {formData},
+        formData,
         {headers: {'Accept': 'application/json'}}
       )
         .then(res => {
