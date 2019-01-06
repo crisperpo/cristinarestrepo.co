@@ -110,11 +110,15 @@ class Form extends React.Component {
 
   submitForm () {
     const { isValid, formFields } = this.state
+    const formData = formFields.reduce(function (allFields, field) {
+      allFields[field.name] = field.value
+      return allFields
+    }, {})
 
     if (isValid) {
       Axios.post(
         `https://formcarry.com/s/DWGxPsFXVi1`,
-        {formFields},
+        {formData},
         {headers: {'Accept': 'application/json'}}
       )
         .then(res => {
