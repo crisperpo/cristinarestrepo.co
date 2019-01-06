@@ -113,7 +113,7 @@ class Form extends React.Component {
 
     if (isValid) {
       Axios.post(
-        `https://formspree.io/crispe1586@gmail.com`,
+        `https://formcarry.com/s/DWGxPsFXVi1`,
         {formFields},
         {headers: {'Accept': 'application/json'}}
       )
