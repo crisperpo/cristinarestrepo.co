@@ -1,5 +1,6 @@
 import React from 'react'
 import styleVars from '../assets/scss/_vars.scss'
+import Form from './Form'
 
 const Contact = () => (
   <div
@@ -15,16 +16,16 @@ const Contact = () => (
       <div
         className="Info">
         <span>
+          +(49) 174 8766624
+        </span>
+        <span>
           Leipzig
         </span>
         <span>
           Germany
         </span>
       </div>
-      <div
-        className="Form">
-        Form
-      </div>
+      <Form />
     </div>
   </div>
 )

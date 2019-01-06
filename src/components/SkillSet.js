@@ -11,7 +11,7 @@ const SkillSet = ({ icon, title, content }) => (
       className="Subtitle">
       { title }
     </span>
-    { content.map((skill, i) => <span>{ skill }</span>) }
+    { content.map((skill, i) => <span key={ i }>{ skill }</span>) }
   </div>
 )
 

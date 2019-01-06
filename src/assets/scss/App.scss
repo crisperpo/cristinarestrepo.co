@@ -13,9 +13,10 @@ html,
   margin: 0;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
-  font-size: 0.9em;
+  font-size: 16px;
   line-height: 1.3em;
   color: $color-juri;
+  background-color: white;
   overflow: hidden;
   min-width: calc(320px - 32px);
 }
@@ -125,7 +126,7 @@ html,
 
   &--circle {
     border-radius: 50%;
-    padding: 1em;
+    padding: 0.7em;
     color: white;
     background-color: $color-juri-lighter;
   }
@@ -227,7 +228,94 @@ html,
 
 #contact {
   .Body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column-reverse;
 
+    @media (min-width: $screen-medium) {
+      flex-flow: row;
+    }
+
+    .Info {
+      flex: 1 1 30%;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .Form {
+      flex: 1 1 70%;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      margin-bottom: $gutter;
+
+      .Field {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        margin-bottom: $gutter;
+
+        @media (min-width: $screen-medium) {
+          flex-flow: row;
+        }
+
+        label {
+          flex: 1 1 20%;
+        }
+        input, textarea {
+          flex: 1 1 80%;
+
+          &::selected {
+            border:none
+          }
+
+          &.Invalid {
+            border: 1px solid $color-red;
+          }
+        }
+      }
+    }
   }
 }
 
+/* Form styles */
+input[type="text"],
+textarea {
+  color: $color-juri;
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  line-height: 2;
+  padding: 0 2%;
+  text-decoration: none;
+  outline: none;
+  border: 1px solid $color-juri-lighter;
+
+  &::placeholder {
+    color: $color-juri-lighter;
+    opacity: 1;
+  }
+}
+
+textarea {
+  line-height: 1.5;
+  padding: 6px 7px;
+
+}
+
+button {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 2;
+  padding: 12px 30px;
+  margin-bottom: 5px;
+  border: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  background: $color-pink;
+  color: white;
+}
